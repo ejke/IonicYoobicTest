@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { MasterListPage } from '../master-list/master-list';
 
 /**
  * Generated class for the SignInPage page.
@@ -22,4 +23,7 @@ export class SignInPage {
     console.log('ionViewDidLoad SignInPage');
   }
 
+  signInTapped(event) {
+    this.navCtrl.push(MasterListPage);
+  }
 }

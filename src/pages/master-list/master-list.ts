@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ListDetailPage } from '../list-detail/list-detail';
 
 /**
  * Generated class for the MasterListPage page.
@@ -21,5 +22,7 @@ export class MasterListPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad MasterListPage');
   }
-
+  cardTapped(event, detail){
+    this.navCtrl.push(ListDetailPage);
+  }
 }

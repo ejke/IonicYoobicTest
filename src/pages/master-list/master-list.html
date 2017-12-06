@@ -1,18 +1,65 @@
-<!--
-  Generated template for the MasterListPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>master-list</ion-title>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    <ion-title>Logo</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name='search'></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
-
+  <ion-toolbar>
+  <ion-row text-center text-uppercase>
+    <ion-col>
+      Missions
+    </ion-col>
+    <ion-col>
+      Notes
+    </ion-col>
+    <ion-col>
+      Requests
+    </ion-col>
+  </ion-row>
+ </ion-toolbar>
 </ion-header>
 
 
 <ion-content padding>
+
+  <ion-card (click)="cardTapped($event, detail)">
+    <!-- *ngFor="let detail of details" -->
+    <ion-item>
+     <ion-avatar item-start>
+       <img src="../../assets/imgs/logo.png">
+     </ion-avatar>
+
+     <ion-row>
+       <ion-col>
+         <h2>Marty McFly</h2>
+         <p>Tallinn, Estonia</p>
+       </ion-col>
+       <ion-col text-right>
+         <h2>12 Jan 1993</h2>
+         <p>3 miles</p>
+       </ion-col>
+     </ion-row>
+
+   </ion-item>
+
+    <img src="../../assets/imgs/logo.png"/>
+
+    <ion-card-content>
+      <p>
+      The most popular industrial group ever, and largely
+      responsible for bringing the music to a mass audience.
+      The most popular industrial group ever, and largely
+      responsible for bringing the music to a mass audience.
+      The most popular industrial group ever, and largely
+      responsible for bringing the music to a mass audience.
+    </p>
+  </ion-card-content>
+</ion-card>
 
 </ion-content>
