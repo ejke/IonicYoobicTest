@@ -24,6 +24,7 @@ export class SignInPage {
   }
 
   signInTapped(event) {
-    this.navCtrl.push(MasterListPage);
+    // this.navCtrl.push(MasterListPage);
+    this.navCtrl.setRoot(MasterListPage);
   }
 }

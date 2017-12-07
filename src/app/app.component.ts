@@ -2,8 +2,8 @@ import { Component, ViewChild } from '@angular/core';
 
 import { Platform, MenuController, Nav } from 'ionic-angular';
 
-import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
-import { ListPage } from '../pages/list/list';
+// import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
+// import { ListPage } from '../pages/list/list';
 import { ListDetailPage } from '../pages/list-detail/list-detail';
 import { MasterListPage } from '../pages/master-list/master-list';
 import { SignInPage } from '../pages/sign-in/sign-in';
@@ -19,8 +19,9 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   // make HelloIonicPage the root (or first) page
-  rootPage = MasterListPage;
-  pages: Array<{title: string, component: any}>;
+  rootPage = SignInPage;
+  pages: Array<{title: string, icon: string, component: any}>;
+  // icons: string;
 
   constructor(
     public platform: Platform,
@@ -30,14 +31,16 @@ export class MyApp {
   ) {
     this.initializeApp();
 
+
     // set our app's pages
     this.pages = [
-      { title: 'Dashboard', component: MasterListPage },
-      { title: 'Photos', component: MasterListPage },
-      { title: 'Available Missions', component: MasterListPage },
-      { title: 'My Missions', component: MasterListPage },
-      { title: 'Chat', component: MasterListPage },
-      { title: 'Sign out', component: SignInPage }
+      { title: 'Dashboard', icon: 'image', component: MasterListPage },
+      { title: 'Photos', icon: 'boat', component: MasterListPage },
+      { title: 'Available Missions', icon: 'image', component: MasterListPage },
+      { title: 'My Missions', icon: 'boat', component: MasterListPage },
+      // { title: 'Chat', icon: 'image', component: MasterListPage },
+      { title: 'Sign out', icon: 'boat', component: SignInPage },
+      { icon: 'power',  component: SignInPage }
     ];
   }
 

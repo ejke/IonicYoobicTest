@@ -23,13 +23,11 @@
  </ion-item>
 
   <ion-item  *ngIf="post">
-    <img [src]="post.data.url"/>
+    <img class="full_width" [src]="post.data.url"/>
  </ion-item>
   <!-- <ion-item  *ngIf="post"> -->
     <h4 padding marging>{{post.data.title}}</h4>
  <!-- </ion-item> -->
-
-
 
   <p *ngIf="post">Url: {{post.data.domain}}</p>
   <p *ngIf="post">Created: {{post.data.created_utc}}</p>
