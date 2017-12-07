@@ -22,9 +22,9 @@ export class MasterListPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad MasterListPage');
   }
-  cardTapped(event, posts){
+  cardTapped(event, post){
     this.navCtrl.push(ListDetailPage, {
-      posts: posts
+      post: post
     });
   }
 }

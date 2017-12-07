@@ -9,10 +9,11 @@ import 'rxjs/add/operator/map';
   templateUrl: 'list-detail.html',
 })
 export class ListDetailPage {
-  selectedItem: any;
+  post: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.selectedItem = navParams.get('posts');
+    this.post = navParams.get('post');
+    console.log(this.post)
   }
 
   ionViewDidLoad() {

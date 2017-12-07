@@ -28,7 +28,7 @@
 
 <ion-content padding>
 
-  <ion-card *ngFor="let post of posts" (click)="cardTapped($event, posts)">
+  <ion-card *ngFor="let post of posts" (click)="cardTapped($event, post)">
     <!-- *ngFor="let detail of details" -->
     <ion-item>
      <ion-avatar item-start>
