@@ -1,13 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ListDetailPage } from '../list-detail/list-detail';
-
-/**
- * Generated class for the MasterListPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
 
 @IonicPage()
 @Component({
@@ -16,13 +11,20 @@ import { ListDetailPage } from '../list-detail/list-detail';
 })
 export class MasterListPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  posts: any;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http) {
+    this.http.get('https://www.reddit.com/r/gifs/new/.json?limit=10').map(res => res.json()).subscribe(data => {
+        this.posts = data.data.children;
+    });
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MasterListPage');
   }
-  cardTapped(event, detail){
-    this.navCtrl.push(ListDetailPage);
+  cardTapped(event, posts){
+    this.navCtrl.push(ListDetailPage, {
+      posts: posts
+    });
   }
 }

@@ -28,36 +28,31 @@
 
 <ion-content padding>
 
-  <ion-card (click)="cardTapped($event, detail)">
+  <ion-card *ngFor="let post of posts" (click)="cardTapped($event, posts)">
     <!-- *ngFor="let detail of details" -->
     <ion-item>
      <ion-avatar item-start>
-       <img src="../../assets/imgs/logo.png">
+       <img [src]="post.data.thumbnail">
      </ion-avatar>
 
      <ion-row>
        <ion-col>
-         <h2>Marty McFly</h2>
-         <p>Tallinn, Estonia</p>
+         <h2>{{post.data.author}}</h2>
+         <p>{{post.data.domain}}</p>
        </ion-col>
        <ion-col text-right>
-         <h2>12 Jan 1993</h2>
+         <h2>{{post.data.created_utc}}</h2>
          <p>3 miles</p>
        </ion-col>
      </ion-row>
 
    </ion-item>
 
-    <img src="../../assets/imgs/logo.png"/>
+    <img [src]="post.data.url"/>
 
     <ion-card-content>
       <p>
-      The most popular industrial group ever, and largely
-      responsible for bringing the music to a mass audience.
-      The most popular industrial group ever, and largely
-      responsible for bringing the music to a mass audience.
-      The most popular industrial group ever, and largely
-      responsible for bringing the music to a mass audience.
+    {{post.data.title}}
     </p>
   </ion-card-content>
 </ion-card>

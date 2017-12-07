@@ -1,17 +1,23 @@
 <ion-menu side="left" [content]="content">
 
-  <ion-header>
+  <!-- <ion-header>
     <ion-toolbar>
       <ion-title>Pages</ion-title>
     </ion-toolbar>
-  </ion-header>
+  </ion-header> -->
 
-  <ion-content>
+  <ion-content style="background-color: #E0E3EB;">
+    <ion-avatar>
+      <img src="../../assets/imgs/logo.png">
+    </ion-avatar>
     <ion-list>
-      <button ion-item *ngFor="let p of pages" (click)="openPage(p)">
+      <button ion-button clear *ngFor="let p of pages" (click)="openPage(p)">
         {{p.title}}
       </button>
     </ion-list>
+    <button ion-button icon-only clear>
+      <ion-icon name='power' dark></ion-icon>
+    </button>
   </ion-content>
 
 </ion-menu>
