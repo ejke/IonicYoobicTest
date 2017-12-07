@@ -13,7 +13,6 @@ export class ListDetailPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.post = navParams.get('post');
-    console.log(this.post)
   }
 
   ionViewDidLoad() {
