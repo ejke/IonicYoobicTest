@@ -8,8 +8,8 @@
       </div>
 
       <button ion-button clear color="dark" class="menu_btn" *ngFor="let p of pages" (click)="openPage(p)">
-        <ion-icon name="{{p.icon}}" item-left></ion-icon>
-        <span padding-left>{{p.title}}</span>
+        <ion-icon *ngIf="p.icon" name="{{p.icon}}" item-left></ion-icon>
+        <span padding-left *ngIf="p.title">{{p.title}}</span>
       </button>
 
     </ion-list>

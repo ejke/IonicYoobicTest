@@ -2,9 +2,6 @@ import { Component, ViewChild } from '@angular/core';
 
 import { Platform, MenuController, Nav } from 'ionic-angular';
 
-// import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
-// import { ListPage } from '../pages/list/list';
-import { ListDetailPage } from '../pages/list-detail/list-detail';
 import { MasterListPage } from '../pages/master-list/master-list';
 import { SignInPage } from '../pages/sign-in/sign-in';
 
@@ -40,7 +37,7 @@ export class MyApp {
       { title: 'My Missions', icon: 'boat', component: MasterListPage },
       // { title: 'Chat', icon: 'image', component: MasterListPage },
       { title: 'Sign out', icon: 'boat', component: SignInPage },
-      { icon: 'power',  component: SignInPage }
+      { title: '', icon: 'power',  component: SignInPage }
     ];
   }
 
